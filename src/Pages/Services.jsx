@@ -10,9 +10,7 @@ const Services = () => {
       <section className="bg-[#1140c1] text-white py-24 lg:py-32 border-b-8 border-[#0b287a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
-            <span className="text-[#ffeb3b] font-extrabold text-sm tracking-widest uppercase mb-6 block">
-              - Our Technical Scope
-            </span>
+
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-8">
               Building systems that process logic, not just pixels.
             </h1>

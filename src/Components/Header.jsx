@@ -30,15 +30,13 @@ const Header = () => {
           
           {/* Logo Section - STRICT RULE: Full Company Name */}
           <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="flex items-center gap-3">
-              <img src={logo} className='h-10' alt="" />
+            <Link to="/" className="flex mr-5 items-center">
+              <img src={logo} className='h-9' alt="" />
               <div className="flex flex-col">
-                <span className="font-extrabold text-xl tracking-tight text-[#0b287a] leading-none">
+                <span className="font-extrabold text-lg tracking-tight text-[#0b287a] leading-none">
                   MOTIONCOMM
                 </span>
-                <span className="text-[10px] font-semibold tracking-widest text-zinc-500 uppercase mt-1">
-                  Private Limited
-                </span>
+                
               </div>
             </Link>
           </div>

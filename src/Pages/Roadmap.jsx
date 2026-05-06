@@ -23,9 +23,7 @@ const Roadmap = () => {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
-            <span className="text-[#ffeb3b] font-extrabold text-sm tracking-widest uppercase mb-6 block">
-              - Internal Timeline
-            </span>
+            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-8">
               Engineering in the open. Building for the long term.
             </h1>

@@ -17,10 +17,6 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="z-10"
           >
-            {/* Opener: Contrast Statement */}
-            <span className="text-[#ffeb3b] font-extrabold text-xs tracking-widest uppercase mb-6 block">
-              - The difference is in the architecture
-            </span>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
               Engineering the framework for your future operations.

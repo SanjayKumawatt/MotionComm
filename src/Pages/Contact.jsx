@@ -31,9 +31,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
             <div>
-              <span className="text-[#ffeb3b] font-extrabold text-sm tracking-widest uppercase mb-6 block">
-                - Direct Communication
-              </span>
+              
               <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-8">
                 Reach out to our engineering team.
               </h1>
@@ -99,9 +97,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <span className="block text-sm text-zinc-500 uppercase tracking-widest font-bold mb-1">Direct Email</span>
-                    <a href="mailto:contact@motioncommservices.in" className="text-lg font-bold text-[#0b287a] hover:text-[#1140c1] transition-colors break-all">
+                    <div className="text-lg font-bold text-[#0b287a] hover:text-[#1140c1] transition-colors break-all">
                       contact@motioncommservices.in
-                    </a>
+                    </div>
                   </div>
                 </div>
               </div>

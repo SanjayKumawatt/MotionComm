@@ -356,9 +356,9 @@ const HomeSections = () => {
                   <Mail className="w-6 h-6 text-[#ffeb3b]" />
                   <div>
                     <span className="block text-sm text-blue-200 uppercase tracking-widest font-semibold mb-1">Direct Email</span>
-                    <a href="mailto:contact@motioncommservices.in" className="text-xl font-bold text-white hover:text-[#ffeb3b] transition-colors">
+                    <div className="text-xl font-bold text-white hover:text-[#ffeb3b] transition-colors">
                       contact@motioncommservices.in
-                    </a>
+                    </div>
                   </div>
                 </div>
               </div>
