@@ -8,35 +8,32 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
-  // STRICT RULE: Max 6 nav items. Target is 5.
-  // STRICT RULE: No past projects allowed. Different page names used.
+  // 🟩 FOCUS ON PRODUCT & INFRASTRUCTURE
   const navLinks = [
-    { title: 'Home', path: '/' },
-    { title: 'Our Story', path: '/about' }, // Avoided generic "About"
-    { title: 'Core Capabilities', path: '/services' }, // Avoided generic "Services"
-    { title: 'Development Roadmap', path: '/roadmap' }, // Replaced "Projects" with forward-looking language
-    // { title: 'Get In Touch', path: '/contact' } // Avoided generic "Contact"
+    { title: 'Platform', path: '/platform' },
+    { title: 'Infrastructure', path: '/infrastructure' },
+    { title: 'Developers & API', path: '/docs' },
+    { title: 'Customers', path: '/customers' },
+    { title: 'Company', path: '/company' }
   ];
 
   const isActive = (path) => location.pathname === path;
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white shadow-sm font-sans">
-      {/* Top thin blue bar inspired by the reference theme */}
       <div className="h-1.5 w-full bg-[#1140c1]"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           
-          {/* Logo Section - STRICT RULE: Full Company Name */}
+          {/* Logo Section */}
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="flex mr-5 items-center">
-              <img src={logo} className='h-9' alt="" />
+              <img src={logo} className='h-9' alt="MotionComm Logo" />
               <div className="flex flex-col">
                 <span className="font-extrabold text-lg tracking-tight text-[#0b287a] leading-none">
                   MOTIONCOMM
                 </span>
-                
               </div>
             </Link>
           </div>
@@ -49,7 +46,7 @@ const Header = () => {
                 to={link.path}
                 className={`text-sm font-bold transition-colors duration-200 ${
                   isActive(link.path)
-                    ? 'text-[#1140c1]' // Active state in reference blue
+                    ? 'text-[#1140c1]' 
                     : 'text-[#0b287a] hover:text-[#1140c1]'
                 }`}
               >
@@ -58,13 +55,13 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button (Desktop) - STRICT RULE: Named CTA Button */}
-          <div className="hidden lg:flex items-center">
+          {/* CTA Button (Desktop) - 🟩 Clean, no /login */}
+          <div className="hidden md:flex items-center">
             <Link
               to="/contact"
               className="bg-[#1140c1] text-white text-sm font-bold px-6 py-2.5 rounded-sm hover:bg-[#0b287a] transition-colors duration-200"
             >
-              Start the Conversation
+              Request Access
             </Link>
           </div>
 
@@ -110,13 +107,13 @@ const Header = () => {
                   {link.title}
                 </Link>
               ))}
-              <div className="pt-4 mt-2 border-t border-zinc-100">
+              <div className="pt-4 mt-2 border-t border-zinc-100 flex flex-col space-y-3">
                 <Link
                   to="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block w-full text-center bg-[#1140c1] text-white px-5 py-3 rounded-sm font-bold hover:bg-[#0b287a] transition-colors"
                 >
-                  Start the Conversation
+                  Request Access
                 </Link>
               </div>
             </div>
