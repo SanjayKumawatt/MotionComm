@@ -23,25 +23,7 @@ const Customers = () => {
             </p>
           </motion.div>
 
-          {/* LIVE METRICS BAR */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div className="bg-white p-6 border border-zinc-200 rounded-sm shadow-sm">
-              <div className="text-2xl font-extrabold text-[#1140c1] mb-1">10M+</div>
-              <div className="text-xs font-bold text-zinc-500 uppercase tracking-widest">Requests / Month</div>
-            </div>
-            <div className="bg-white p-6 border border-zinc-200 rounded-sm shadow-sm">
-              <div className="text-2xl font-extrabold text-[#1140c1] mb-1">99.9%</div>
-              <div className="text-xs font-bold text-zinc-500 uppercase tracking-widest">Platform Uptime</div>
-            </div>
-            <div className="bg-white p-6 border border-zinc-200 rounded-sm shadow-sm">
-              <div className="text-2xl font-extrabold text-[#1140c1] mb-1">&lt; 50ms</div>
-              <div className="text-xs font-bold text-zinc-500 uppercase tracking-widest">Avg Latency</div>
-            </div>
-            <div className="bg-white p-6 border border-zinc-200 rounded-sm shadow-sm">
-              <div className="text-2xl font-extrabold text-[#1140c1] mb-1">Zero</div>
-              <div className="text-xs font-bold text-zinc-500 uppercase tracking-widest">Data Breaches</div>
-            </div>
-          </div>
+         
         </div>
       </section>
 

@@ -9,9 +9,11 @@ import Roadmap from './Pages/Roadmap'
 import Contact from './Pages/Contact'
 import Platform from './Pages/Platform'
 import Infrastructure from './Pages/Infrastructure'
-import Docs from './Pages/Docs'
+// import Docs from './Pages/Docs'
 import Customers from './Pages/Customer'
 import Company from './Pages/Company'
+import MotionInsight from './Pages/Products'
+import Developers from './Pages/Docs'
 
 const App = () => {
 
@@ -30,17 +32,25 @@ const App = () => {
           element:<Platform/>
         }, 
         {
+          path:"/products",
+          element:<MotionInsight/>
+        }, 
+
+
+
+
+        {
           path:"/infrastructure",
           element:<Infrastructure/>
         }, 
         {
           path:"/docs",
-          element:<Docs/>
+          element:<Developers/>
         }, 
-        {
-          path:"/customers",
-          element:<Customers/>
-        }, 
+        // {
+        //   path:"/customers",
+        //   element:<Customers/>
+        // }, 
         {
           path:"/company",
           element:<Company/>

@@ -8,13 +8,13 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
-  // 🟩 FOCUS ON PRODUCT & INFRASTRUCTURE
+  // 🟩 FOCUS ON EARLY-STAGE STARTUP & REALISTIC NAVIGATION
   const navLinks = [
     { title: 'Platform', path: '/platform' },
-    { title: 'Infrastructure', path: '/infrastructure' },
+    { title: 'Products', path: '/products' },
     { title: 'Developers & API', path: '/docs' },
-    { title: 'Customers', path: '/customers' },
-    { title: 'Company', path: '/company' }
+    { title: 'Company', path: '/company' },
+    // { title: 'Contact', path: '/contact' }
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -26,7 +26,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           
-          {/* Logo Section */}
+          {/* Logo Section - Minimalist & Matte */}
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="flex mr-5 items-center">
               <img src={logo} className='h-9' alt="MotionComm Logo" />
@@ -55,7 +55,7 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button (Desktop) - 🟩 Clean, no /login */}
+          {/* CTA Button (Desktop) - 🟩 Honest MVP Vibe */}
           <div className="hidden md:flex items-center">
             <Link
               to="/contact"

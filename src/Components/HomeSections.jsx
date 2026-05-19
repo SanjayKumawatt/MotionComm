@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Layers, Database, Shield, Code, Server, Smartphone, Check, Mail, MapPin, CheckCircle2, X, Cpu, Globe2, Layout, Activity, Briefcase, Terminal, Webhook } from 'lucide-react';
+import { Layers, Database, Shield, Code, Server, Check, Mail, MapPin, CheckCircle2, X, Cpu, Globe2, Layout, Activity, Terminal, Webhook, User, BarChart, FileJson } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const HomeSections = () => {
@@ -17,25 +17,25 @@ const HomeSections = () => {
   return (
     <div className="font-sans text-zinc-900 bg-white relative">
       
-      {/* SECTION 1: THE PROBLEM & OUR ACTIVE SOLUTION */}
+      {/* SECTION 1: WHY WE ARE BUILDING MOTIONCOMM */}
       <section className="py-24 border-b border-zinc-200 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <span className="text-[#1140c1] font-bold text-sm tracking-widest uppercase mb-3 block">
-                - Enterprise Infrastructure
+                - Our Mission
               </span>
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-[#0b287a] mb-6">
-                Why modern teams migrate to Motioncomm.
+                Why we are building Motioncomm.
               </h2>
               <div className="w-16 h-1.5 bg-[#ffeb3b] mb-8"></div>
               
               <div className="space-y-6 text-lg text-zinc-700 leading-relaxed font-medium">
                 <p>
-                  Scaling software shouldn't mean dealing with fragile deployments, bloated codebases, or server downtime. Many businesses struggle because their underlying infrastructure wasn't built for high concurrency.
+                  Most early-stage startups lose months building authentication, database schemas, and API boilerplate before writing a single line of business logic. We experienced this firsthand and are building tools to solve it.
                 </p>
                 <p>
-                  Motioncomm provides a production-ready alternative. We operate clean, modular IT infrastructure and automated data pipelines. Our systems are actively handling complex logic and heavy data loads, engineered from the ground up to prevent technical debt before it happens.
+                  Motioncomm is developing a modular backend API platform and a data analytics product - <strong className="text-zinc-900">MotionInsight</strong> - that gives development teams a clean, secure starting point. Our platform is built on Node.js, React, and MongoDB/PostgreSQL.
                 </p>
               </div>
             </div>
@@ -45,103 +45,128 @@ const HomeSections = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative rounded-sm overflow-hidden h-[450px] border border-zinc-200"
+              className="relative rounded-sm overflow-hidden h-[450px] border border-zinc-200 bg-zinc-100 flex items-center justify-center"
             >
-              {/* Using a clean, matte server/code image */}
-              <div className="absolute inset-0 bg-[#0b287a]/20 mix-blend-multiply z-10"></div>
+              {/* Clean, startup-focused placeholder image - No fake SLA overlays */}
+              <div className="absolute inset-0 bg-[#0b287a]/10 mix-blend-multiply z-10"></div>
               <img 
-                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" 
-                alt="Active Server Operations" 
-                className="w-full h-full object-cover grayscale-[10%]"
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" 
+                alt="Code and Development" 
+                className="w-full h-full object-cover grayscale-[20%]"
               />
-              <div className="absolute bottom-6 left-6 z-20 bg-white p-4 flex items-center gap-3 rounded-sm border border-zinc-100">
-                <Activity className="w-6 h-6 text-[#1140c1]" />
-                <span className="font-bold text-sm text-zinc-800 tracking-wide uppercase">99.9% Uptime SLA</span>
+              <div className="absolute bottom-6 left-6 z-20 bg-white p-4 flex items-center gap-3 rounded-sm border border-zinc-100 shadow-sm">
+                <Terminal className="w-6 h-6 text-[#1140c1]" />
+                <span className="font-bold text-sm text-zinc-800 tracking-wide uppercase">Active Development</span>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 2: LIVE PLATFORM CAPABILITIES */}
+      {/* SECTION 2: WHAT WE ARE BUILDING (Current Focus) */}
       <section className="py-24 bg-zinc-50 border-b border-zinc-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16 max-w-3xl">
             <span className="text-[#1140c1] font-bold text-sm tracking-widest uppercase mb-3 block">
-              - Platform Capabilities
+              - What We Are Building
             </span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-zinc-900 mb-6">
-              Deployed and fully operational.
+              Our current development focus.
             </h2>
-            <p className="text-zinc-600 text-lg leading-relaxed">
-              Our core modules are live. Clients utilize our custom-built digital assets and RESTful endpoints to bypass months of internal development and go straight to market.
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-10 border border-zinc-200 hover:border-[#1140c1] transition-colors relative overflow-hidden group">
-              <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6 rounded-sm">
-                <Code className="w-6 h-6 text-[#1140c1]" />
-              </div>
-              <h3 className="text-xl font-bold mb-4">Scalable Web Apps</h3>
-              <p className="text-zinc-600 leading-relaxed mb-6">
-                Full-stack web platforms rendering at lightning speed. We manage the database security, authentication state, and user portals so you can focus on your business logic.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2 text-sm text-zinc-700 font-semibold">
-                  <Check className="w-4 h-4 text-[#1140c1] mt-0.5" /> High-concurrency architecture
-                </li>
-                <li className="flex items-start gap-2 text-sm text-zinc-700 font-semibold">
-                  <Check className="w-4 h-4 text-[#1140c1] mt-0.5" /> Managed auth & security
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-10 border border-zinc-200 hover:border-[#1140c1] transition-colors relative overflow-hidden">
-              <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6 rounded-sm">
-                <Webhook className="w-6 h-6 text-[#1140c1]" />
-              </div>
-              <h3 className="text-xl font-bold mb-4">Automated Pipelines</h3>
-              <p className="text-zinc-600 leading-relaxed mb-6">
-                Data-driven marketing and operational systems. Our webhooks accurately capture leads, route data to your CRM, and reduce manual tracking errors to zero.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2 text-sm text-zinc-700 font-semibold">
-                  <Check className="w-4 h-4 text-[#1140c1] mt-0.5" /> Real-time data routing
-                </li>
-                <li className="flex items-start gap-2 text-sm text-zinc-700 font-semibold">
-                  <Check className="w-4 h-4 text-[#1140c1] mt-0.5" /> Analytics API integration
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white p-10 border border-zinc-200 hover:border-[#1140c1] transition-colors relative overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            {/* Product 1: Backend API Platform */}
+            <div className="bg-white p-10 border border-zinc-200 hover:border-[#1140c1] transition-colors relative overflow-hidden flex flex-col h-full">
               <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6 rounded-sm">
                 <Server className="w-6 h-6 text-[#1140c1]" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Cloud Environments</h3>
-              <p className="text-zinc-600 leading-relaxed mb-6">
-                Deployed on distributed server networks. We handle load balancing, automated failovers, and strict resource management to guarantee your service never drops.
+              <div className="mb-4 flex items-center justify-between">
+                <h3 className="text-xl font-bold">Backend API Platform</h3>
+                <span className="bg-yellow-100 text-yellow-800 text-xs font-bold px-3 py-1 rounded-sm uppercase tracking-wider">In Development</span>
+              </div>
+              <p className="text-zinc-600 leading-relaxed mb-6 flex-grow">
+                A modular REST API infrastructure handling authentication, role-based access, and data routing - deployable via our SDK once released. Targeted at startups who want production-ready backend scaffolding without the overhead of building it from scratch.
               </p>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2 text-sm text-zinc-700 font-semibold">
-                  <Check className="w-4 h-4 text-[#1140c1] mt-0.5" /> Multi-region deployment
+              <ul className="space-y-3 mt-auto pt-6 border-t border-zinc-100">
+                <li className="flex items-start gap-3 text-sm text-zinc-700 font-semibold">
+                  <Check className="w-4 h-4 text-[#1140c1] mt-0.5 flex-shrink-0" /> JWT-based authentication middleware
                 </li>
-                <li className="flex items-start gap-2 text-sm text-zinc-700 font-semibold">
-                  <Check className="w-4 h-4 text-[#1140c1] mt-0.5" /> Continuous integration
+                <li className="flex items-start gap-3 text-sm text-zinc-700 font-semibold">
+                  <Check className="w-4 h-4 text-[#1140c1] mt-0.5 flex-shrink-0" /> RESTful data routing endpoints
+                </li>
+                <li className="flex items-start gap-3 text-sm text-zinc-700 font-semibold">
+                  <Check className="w-4 h-4 text-[#1140c1] mt-0.5 flex-shrink-0" /> Webhook configuration for third-party integrations
                 </li>
               </ul>
+            </div>
+
+            {/* Product 2: MotionInsight */}
+            <div className="bg-white p-10 border border-zinc-200 hover:border-[#1140c1] transition-colors relative overflow-hidden flex flex-col h-full">
+              <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6 rounded-sm">
+                <BarChart className="w-6 h-6 text-[#1140c1]" />
+              </div>
+              <div className="mb-4 flex items-center justify-between">
+                <h3 className="text-xl font-bold">MotionInsight - Analytics</h3>
+                <span className="bg-yellow-100 text-yellow-800 text-xs font-bold px-3 py-1 rounded-sm uppercase tracking-wider">In Development</span>
+              </div>
+              <p className="text-zinc-600 leading-relaxed mb-6 flex-grow">
+                MotionInsight is our SaaS analytics product under development. It is designed to give non-technical business owners a simple view of their operational data - pulling from CRM, sales, and marketing sources into a single dashboard with automated plain-language summaries generated from their data.
+              </p>
+              <ul className="space-y-3 mt-auto pt-6 border-t border-zinc-100">
+                <li className="flex items-start gap-3 text-sm text-zinc-700 font-semibold">
+                  <Check className="w-4 h-4 text-[#1140c1] mt-0.5 flex-shrink-0" /> Connects to common data sources (CSV, Google Sheets, basic APIs)
+                </li>
+                <li className="flex items-start gap-3 text-sm text-zinc-700 font-semibold">
+                  <Check className="w-4 h-4 text-[#1140c1] mt-0.5 flex-shrink-0" /> Automated plain-language summaries of business metrics
+                </li>
+                <li className="flex items-start gap-3 text-sm text-zinc-700 font-semibold">
+                  <Check className="w-4 h-4 text-[#1140c1] mt-0.5 flex-shrink-0" /> Customisable dashboards - no SQL or coding required
+                </li>
+                <li className="flex items-start gap-3 text-sm text-zinc-700 font-semibold">
+                  <Check className="w-4 h-4 text-[#1140c1] mt-0.5 flex-shrink-0" /> Built for small business owners and early-stage teams
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3: OUR FOUNDER */}
+      <section className="py-24 border-b border-zinc-200 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-zinc-50 border border-zinc-200 p-8 md:p-12 rounded-sm max-w-4xl mx-auto">
+            <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
+              <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 border-2 border-white shadow-sm">
+                <User className="w-10 h-10 text-[#1140c1]" />
+              </div>
+              <div>
+                <span className="text-[#1140c1] font-bold text-sm tracking-widest uppercase mb-2 block">
+                  - The Team
+                </span>
+                <h2 className="text-2xl font-extrabold text-zinc-900 mb-4">
+                  Who is building Motioncomm.
+                </h2>
+                <p className="text-zinc-600 leading-relaxed font-medium mb-4">
+                  Motioncomm was founded by Neetu Saini, a software engineer with a focus on backend systems and developer tooling. Neetu started Motioncomm after repeatedly experiencing the same problem across projects: engineering teams spending the majority of early-stage time on infrastructure rather than on their actual product.
+                </p>
+                <p className="text-zinc-600 leading-relaxed font-medium">
+                  The company is run as a lean, engineering-led organisation with a remote development team based in Jaipur, Rajasthan, building both the API platform and the MotionInsight dashboard.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 3: THE TECHNOLOGY STACK (Tailored for Modern MERN/JS ecosystems) */}
+      {/* SECTION 4: THE TECHNOLOGY STACK (Kept Original - Matches perfectly) */}
       <section className="py-24 border-b border-zinc-200 bg-[#0b287a]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
              <span className="text-[#ffeb3b] font-bold text-sm tracking-widest uppercase mb-3 block">
-              - Production Stack
+              - Core Technologies
             </span>
             <h2 className="text-3xl font-extrabold text-white mb-6">
               Built on Modern JavaScript & Cloud Tech
@@ -168,72 +193,6 @@ const HomeSections = () => {
         </div>
       </section>
 
-      {/* NEW SECTION 4 (REPLACES EXCUSES/PHASING): DEVELOPER EXPERIENCE */}
-      <section className="py-24 border-b border-zinc-200 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            <div className="lg:col-span-6 space-y-8">
-              <div>
-                <h2 className="text-3xl font-extrabold text-[#0b287a] mb-6">
-                  Developer-First Integration.
-                </h2>
-                <p className="text-zinc-600 text-lg leading-relaxed">
-                  Motioncomm is built by engineers, for engineers. Stop wrestling with legacy spaghetti code. Our component-based architecture and documented API endpoints allow your team to integrate our infrastructure in hours, not months.
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                <div className="flex gap-4">
-                  <Terminal className="w-6 h-6 text-[#1140c1] flex-shrink-0" />
-                  <div>
-                    <h3 className="text-lg font-bold mb-2">Clean API Documentation</h3>
-                    <p className="text-zinc-600 text-sm">Well-structured REST endpoints with predictable request/response cycles.</p>
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <Shield className="w-6 h-6 text-[#1140c1] flex-shrink-0" />
-                  <div>
-                    <h3 className="text-lg font-bold mb-2">Pre-built Security Middlewares</h3>
-                    <p className="text-zinc-600 text-sm">Input sanitization, rate-limiting, and secure routing handled at the network edge.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Fake Code Editor Block to show real software vibes */}
-            <div className="lg:col-span-6">
-              <div className="bg-[#0b1120] rounded-sm border border-zinc-800 overflow-hidden shadow-2xl">
-                <div className="bg-[#1e293b] px-4 py-3 flex items-center gap-2 border-b border-zinc-700">
-                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                  <span className="ml-4 text-xs text-zinc-400 font-mono">motioncomm-init.js</span>
-                </div>
-                <div className="p-6 font-mono text-sm text-blue-300 overflow-x-auto">
-                  <pre>
-                    <code>
-<span className="text-purple-400">import</span> {'{'} MotionClient {'}'} <span className="text-purple-400">from</span> <span className="text-green-300">'@motioncomm/sdk'</span>;{'\n\n'}
-<span className="text-zinc-500">// Initialize infrastructure</span>{'\n'}
-<span className="text-purple-400">const</span> client = <span className="text-purple-400">new</span> MotionClient({'{'}{'\n'}
-{'  '}apiKey: process.env.<span className="text-yellow-300">MOTION_API_KEY</span>,{'\n'}
-{'  '}environment: <span className="text-green-300">'production'</span>{'\n'}
-{'}'});{'\n\n'}
-<span className="text-zinc-500">// Deploy routing instance</span>{'\n'}
-<span className="text-purple-400">await</span> client.router.<span className="text-blue-400">deploy</span>({'{'}{'\n'}
-{'  '}autoScaling: <span className="text-yellow-300">true</span>,{'\n'}
-{'  '}region: <span className="text-green-300">'ap-south-1'</span>{'\n'}
-{'}'});
-                    </code>
-                  </pre>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
       {/* SECTION 5: CONTACT / REQUEST ACCESS */}
       <section className="py-24 bg-zinc-50 border-t border-zinc-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -241,42 +200,55 @@ const HomeSections = () => {
             
             <div className="text-zinc-900">
               <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-[#0b287a]">
-                Request Platform Access
+                Get in Touch
               </h2>
               <p className="text-zinc-600 text-lg mb-8 leading-relaxed max-w-md">
-                Our infrastructure is built for startups and enterprises that require serious scale. Submit your operational requirements, and our engineering team will provision your access.
+                Interested in our early-access program or want to learn more about what we are building? Reach out to our team.
                 <br /><br />
-                <strong className="text-[#1140c1]">We review and respond to all access requests within one working day.</strong>
+                <strong className="text-[#1140c1]">We review and respond to all inquiries within one working day.</strong>
               </p>
 
-              <div className="mb-10 p-6 bg-white border border-zinc-200 rounded-sm">
-                <div className="flex items-center gap-4 mb-4">
+              <div className="mb-8 p-6 bg-white border border-zinc-200 rounded-sm">
+                <div className="flex items-center gap-4">
                   <Mail className="w-6 h-6 text-[#1140c1]" />
                   <div>
-                    <span className="block text-sm text-zinc-500 uppercase tracking-widest font-semibold mb-1">Direct Engineering Contact</span>
-                    <div className="text-xl font-bold text-zinc-900 hover:text-[#1140c1] transition-colors">
+                    <span className="block text-sm text-zinc-500 uppercase tracking-widest font-semibold mb-1">Direct Contact</span>
+                    <div className="text-xl font-bold text-zinc-900 hover:text-[#1140c1] transition-colors break-all">
                       contact@motioncommservices.in
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <MapPin className="w-6 h-6 text-[#1140c1] flex-shrink-0 mt-1" />
-                <div>
-                  <span className="block text-sm text-zinc-500 uppercase tracking-widest font-semibold mb-2">Registered Base</span>
-                  <address className="text-zinc-700 not-italic leading-relaxed font-medium">
-                    S/o Lt. K.k. Debnath. A.d, Nagar Road No 7.<br />
-                    Agartala, Arundhutinagar,<br />
-                    West Tripura, Sadar,<br />
-                    Tripura, India, 799003
-                  </address>
+              {/* Transparent Location Info */}
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <MapPin className="w-6 h-6 text-[#1140c1] flex-shrink-0 mt-1" />
+                  <div>
+                    <span className="block text-sm text-zinc-500 uppercase tracking-widest font-semibold mb-2">Engineering Hub</span>
+                    <address className="text-zinc-700 not-italic leading-relaxed font-medium">
+                      Remote Operations & Development<br />
+                      Jaipur, Rajasthan, India
+                    </address>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-4 pt-4 border-t border-zinc-200">
+                  <FileJson className="w-5 h-5 text-zinc-400 flex-shrink-0 mt-1" />
+                  <div>
+                    <span className="block text-xs text-zinc-400 uppercase tracking-widest font-semibold mb-1">Registered Base</span>
+                    <address className="text-zinc-500 not-italic leading-relaxed text-sm">
+                      S/o Lt. K.k. Debnath. A.d, Nagar Road No 7.<br />
+                      Agartala, Arundhutinagar, West Tripura<br />
+                      Tripura, India, 799003
+                    </address>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div className="bg-white p-8 md:p-10 border border-zinc-200 border-t-4 border-t-[#1140c1] relative">
-              <h3 className="text-2xl font-bold text-zinc-900 mb-6">Submit API/Access Request</h3>
+              <h3 className="text-2xl font-bold text-zinc-900 mb-6">Join the Waitlist / Inquiry</h3>
               
               <form onSubmit={handleFormSubmit} className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -299,18 +271,17 @@ const HomeSections = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-zinc-700">Infrastructure Needed</label>
+                  <label className="text-sm font-bold text-zinc-700">Interest Area</label>
                   <select className="w-full px-4 py-3 bg-zinc-50 border border-zinc-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-[#1140c1] transition-all" required>
                     <option value="">Select Requirement</option>
-                    <option value="api">API Endpoints Integration</option>
-                    <option value="saas">Custom Web App Deployment</option>
-                    <option value="pipeline">Marketing Data Pipelines</option>
-                    <option value="cloud">Cloud Hosting & Setup</option>
+                    <option value="api">Backend API Platform (Waitlist)</option>
+                    <option value="analytics">MotionInsight Analytics (Waitlist)</option>
+                    <option value="general">General Inquiry</option>
                   </select>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-zinc-700">Technical Details / Current Stack</label>
+                  <label className="text-sm font-bold text-zinc-700">Tell us about your team/project</label>
                   <textarea 
                     rows="4" 
                     placeholder="Briefly describe what you are building..."
@@ -323,7 +294,7 @@ const HomeSections = () => {
                   type="submit"
                   className="w-full bg-[#1140c1] text-white font-bold py-4 rounded-sm hover:bg-[#0b287a] transition-colors mt-4 text-lg flex justify-center items-center gap-2"
                 >
-                  Request Configuration
+                  Submit Inquiry
                 </button>
               </form>
             </div>
@@ -343,9 +314,9 @@ const HomeSections = () => {
           >
             <CheckCircle2 className="w-6 h-6 text-[#ffeb3b] flex-shrink-0 mt-0.5" />
             <div>
-              <h4 className="text-white font-bold text-sm mb-1">Request Received</h4>
+              <h4 className="text-white font-bold text-sm mb-1">Message Received</h4>
               <p className="text-blue-100 text-xs font-medium leading-relaxed">
-                Our engineering team will review your requirements and provision access details within one working day.
+                Thank you for reaching out. Our team will get back to you shortly.
               </p>
             </div>
             <button 
